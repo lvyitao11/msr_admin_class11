@@ -16,6 +16,7 @@
     <description>MSR父工程</description>
 
     <properties>
+        <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
         <java.version>1.8</java.version>
         <msr.version>0.0.1-SNAPSHOT</msr.version>
         <mybatis-plus.version>3.0.5</mybatis-plus.version>
@@ -42,10 +43,15 @@
     <modules>
         <module>../msr-common</module>
         <module>../msr-edu</module>
+        <module>../msr-ucenter</module>
+        <module>../msr-statistics</module>
+        <module>../renren-fast</module>
+        <module>../renren-generator</module>
     </modules>
 
     <dependencyManagement>
         <dependencies>
+
             <dependency>
                 <groupId>com.msr</groupId>
                 <artifactId>msr-common</artifactId>

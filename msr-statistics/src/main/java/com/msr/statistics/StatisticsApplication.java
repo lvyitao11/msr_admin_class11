@@ -1,26 +1,26 @@
-package com.msr.edu;
+package com.msr.statistics;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @author lv
  * @version V1.0
- * @Package com.msr.edu
- * @date 2020/6/5 14:17
- * @Copyright © 株式会社多言语系统研究所
+ * @Package com.msr.statistics
+ * @date 2020/6/12 11:45
+ * @Copyright © MSR
  */
-
-//主类  或启动类
+@EnableFeignClients(basePackages = "com.msr.statistics.feign")
 @EnableDiscoveryClient
 @SpringBootApplication
-@MapperScan("com.msr.edu.mapper")
-@ComponentScan(basePackages={"com.msr.edu","com.msr.common"})
-public class EduApplication {
+@MapperScan("com.msr.statistics.mapper")
+@ComponentScan(basePackages={"com.msr.statistics","com.msr.common"})
+public class StatisticsApplication {
     public static void main(String[] args) {
-        SpringApplication.run(EduApplication.class,args);
+        SpringApplication.run(StatisticsApplication.class,args);
     }
 }

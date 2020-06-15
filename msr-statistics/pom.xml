@@ -10,10 +10,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>msr-edu</artifactId>
-
+    <artifactId>msr-statistics</artifactId>
     <dependencies>
-
         <dependency>
             <groupId>com.msr</groupId>
             <artifactId>msr-common</artifactId>
@@ -58,16 +56,6 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
-        <!--xls-->
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>commons-fileupload</groupId>
-            <artifactId>commons-fileupload</artifactId>
-        </dependency>
 
         <!--开发者工具-->
         <dependency>
@@ -80,6 +68,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <!-- 引入openfeign依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
 
     </dependencies>
@@ -113,4 +107,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

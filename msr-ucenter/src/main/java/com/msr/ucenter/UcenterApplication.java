@@ -1,4 +1,4 @@
-package com.msr.edu;
+package com.msr.ucenter;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -9,18 +9,16 @@ import org.springframework.context.annotation.ComponentScan;
 /**
  * @author lv
  * @version V1.0
- * @Package com.msr.edu
- * @date 2020/6/5 14:17
- * @Copyright © 株式会社多言语系统研究所
+ * @Package com.msr.ucenter
+ * @date 2020/6/12 10:41
+ * @Copyright © MSR
  */
-
-//主类  或启动类
 @EnableDiscoveryClient
+@MapperScan("com.msr.ucenter.mapper")
+@ComponentScan(basePackages={"com.msr.ucenter","com.msr.common"})
 @SpringBootApplication
-@MapperScan("com.msr.edu.mapper")
-@ComponentScan(basePackages={"com.msr.edu","com.msr.common"})
-public class EduApplication {
+public class UcenterApplication {
     public static void main(String[] args) {
-        SpringApplication.run(EduApplication.class,args);
+        SpringApplication.run(UcenterApplication.class,args);
     }
 }
